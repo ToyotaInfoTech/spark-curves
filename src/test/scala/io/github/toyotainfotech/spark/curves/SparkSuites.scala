@@ -15,7 +15,7 @@ package io.github.toyotainfotech.spark.curves
 
 import io.github.toyotainfotech.spark.curves.ml.clustering.KLClusteringSuite
 import io.github.toyotainfotech.spark.curves.sql.catalyst.expressions.*
-import io.github.toyotainfotech.spark.curves.sql.functions.registerTrajectoryFunctions
+import io.github.toyotainfotech.spark.curves.sql.functions.registerCurveFunctions
 import org.apache.spark.sql.SparkSession
 import org.scalatest.{BeforeAndAfterAll, Suites}
 
@@ -50,7 +50,7 @@ class SparkSuites
     with BeforeAndAfterAll {
 
   override def beforeAll(): Unit =
-    registerTrajectoryFunctions(SparkSuites.spark.sessionState.functionRegistry)
+    registerCurveFunctions(SparkSuites.spark.sessionState.functionRegistry)
 
   override def afterAll(): Unit =
     SparkSuites.spark.stop()

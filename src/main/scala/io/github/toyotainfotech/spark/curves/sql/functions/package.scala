@@ -148,7 +148,7 @@ package object functions {
     FunctionInfo[SmallestRectangleCenter]()
   )
 
-  def registerTrajectoryFunctions(registry: FunctionRegistry): Unit = {
+  def registerCurveFunctions(registry: FunctionRegistry): Unit = {
     for (info <- functionInfoSeq) {
       registry.registerFunction(
         FunctionIdentifier(info.prettyName),

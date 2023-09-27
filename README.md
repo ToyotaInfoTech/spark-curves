@@ -3,7 +3,9 @@
 Spark-curves provides SQL functions and ML Classes on Apache Spark
 about curve calculations such as curve similarity, clustering, etc.
 
-## Dependencies
+## Setup
+
+### Library Dependencies
 
 Apache Spark SQL & MLlib 3.5.0 (on Scala 2.12 or 2.13) are required to use Spark-curves.
 
@@ -13,6 +15,16 @@ Apache Spark SQL & MLlib 3.5.0 (on Scala 2.12 or 2.13) are required to use Spark
 - for Scala 2.13
   - [org.apache.spark » spark-sql_2.13 » 3.5.0](https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.13/3.5.0)
   - [org.apache.spark » spark-mllib_2.13 » 3.5.0](https://mvnrepository.com/artifact/org.apache.spark/spark-mllib_2.13/3.5.0)
+
+### Registration of SQL Functions
+
+```scala
+import io.github.toyotainfotech.spark.curves.sql.functions.registerCurveFunctions
+
+val spark: SparkSession = ??? // use a SparkSession instance in your Spark environment
+
+registerCurveFunctions(spark.sessionState.functionRegistry)
+```
 
 ## Examples
 
