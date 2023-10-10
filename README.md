@@ -1,20 +1,23 @@
 # Spark-curves
 
-Spark-curves provides SQL functions and ML Classes on Apache Spark
-about curve calculations such as curve similarity, clustering, etc.
+[![Maven Central badge](https://maven-badges.herokuapp.com/maven-central/io.github.toyotainfotech/spark-curves_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.toyotainfotech/spark-curves_2.13)
+[![GitHub Actions badge](https://github.com/ToyotaInfoTech/spark-curves/actions/workflows/scala.yml/badge.svg)](https://github.com/ToyotaInfoTech/spark-curves/actions/workflows/scala.yml)
+
+Spark-curves provides SQL functions and ML Classes on Apache Spark about curve calculations such as curve similarity, clustering, etc.
 
 ## Setup
 
-### Library Dependencies
+### SBT Settings
 
 Apache Spark SQL & MLlib 3.5.0 (on Scala 2.12 or 2.13) are required to use Spark-curves.
 
-- for Scala 2.12
-  - [org.apache.spark » spark-sql_2.12 » 3.5.0](https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.12/3.5.0)
-  - [org.apache.spark » spark-mllib_2.12 » 3.5.0](https://mvnrepository.com/artifact/org.apache.spark/spark-mllib_2.12/3.5.0)
-- for Scala 2.13
-  - [org.apache.spark » spark-sql_2.13 » 3.5.0](https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.13/3.5.0)
-  - [org.apache.spark » spark-mllib_2.13 » 3.5.0](https://mvnrepository.com/artifact/org.apache.spark/spark-mllib_2.13/3.5.0)
+```scala
+libraryDependencies ++= Seq(
+  "io.github.toyotainfotech" %% "spark-curves" % "0.4.0",
+  "org.apache.spark" %% "spark-sql" % "3.5.0" % Provided,
+  "org.apache.spark" %% "spark-mllib" % "3.5.0" % Provided
+)
+```
 
 ### Registration of SQL Functions
 
