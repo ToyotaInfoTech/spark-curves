@@ -4,6 +4,7 @@
 [![GitHub Actions badge](https://github.com/ToyotaInfoTech/spark-curves/actions/workflows/scala.yml/badge.svg)](https://github.com/ToyotaInfoTech/spark-curves/actions/workflows/scala.yml)
 
 Spark-curves provides SQL functions and ML Classes on Apache Spark about curve calculations such as curve similarity, clustering, etc.
+For example, it can apply to the analysis of traffic flow or human flow.
 
 ## Setup
 
